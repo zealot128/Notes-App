@@ -1,0 +1,95 @@
+# Additional translations at http://github.com/plataformatec/devise/wiki/I18n
+
+de:
+  errors:
+    messages:  
+      not_found: "nicht gefunden"
+      already_confirmed: "wurde bereits bestätigt. Versuchen Sie sich stattdessen einzuloggen."
+      not_locked: "war nicht gesperrt"
+      not_saved:
+        one: "1 Fehler verhindert das %{resource} gespeichert wird:"
+        other: "%{count} Fehler verhindern das %{resource} gespeichert wird:"
+
+  devise:
+    hello: "Hallo %{name}!"
+    failure:
+      unauthenticated: 'Sie müssen sich einloggen um fortzufahren'
+      unconfirmed: 'Sie müssen Ihren Account erst bestätigen. Bitte prüfen Sie ihr E-Mail-Postfach.'
+      locked: 'Ihr Account ist gesperrt.'
+      invalid: 'Ungültige Mailadresse oder ungültiges Passwort'
+      invalid_token: 'ungültiges Authentifizierungstoken'
+      timeout: 'ihre Session ist abgelaufen. Bitte melden Sie sich erneut an.'
+      inactive: 'Ihr Account wurde noch nicht aktiviert'
+    shared:
+      links:
+        options_html: "Andere Optionen"
+        sign_up: Registrieren
+        forgot: Passwort vergessen?
+        not_received_confirmation: Bestätigungsmail nicht erhalten?
+        sign_in: Einloggen
+        not_received_unlocking: E-Mail mit Entsperrungsmail nicht erhalten?
+    sessions:
+      signed_in: 'Erfolgreich eingeloggt'
+      signed_out: 'Erfolgreich ausgeloggt'
+      new: 
+        title: Einloggen
+        button: Einloggen
+        sign_in: "Anmelden" 
+    passwords:
+      edit:
+        change_password: "Passwort ändern:"
+        new: "Neues Passwort:"
+        confirm: "Passwort wiederholen:"
+        change: "Passwort ändern"
+      new:
+        forgot: "Passwort vergessen?"
+        send: "Email für Passwortreset abschicken"
+      send_instructions: 'Sie werden in Kürze Anweisungen per Mail erhalten zum Zurücksetzen Ihres Passworts.'
+      updated: 'Ihr Passwort wurde aktualisiert.'
+    confirmations:
+      new:
+        resend_confirmation: "Bestätigungsemail erneut senden"
+      send_instructions: 'Sie werden in Kürze Anweisungen per Mail erhalten zur Bestätigung Ihres Accounts.'
+      confirmed: 'Ihr Account wurde erfolgreich aktiviert. Sie sind nun eingeloggt.'
+    registrations:
+      new:
+        title: Als Firma registrieren
+        button: Registrieren
+      edit:
+        edit: "%{user} editieren"
+        leave_blank: "Lassen Sie dieses Feld leer wenn sie das Passwort nicht ändern wollen"
+        need_password: "Geben Sie Ihr aktuelles Passwort ein um Ihre Änderungen zu bestätigen"
+        update: "Profil Aktualisieren"
+        cancel: "Account kündigen"
+        are_you_sure: "Sind Sie sicher?"
+      signed_up: 'Willkommen! Sie wurden erfolgreich angemeldet'
+      inactive_signed_up: 'Sie haben sich erfolgreich angemeldet, aber Ihr Account ist %{reason}.'
+      updated: 'Sie haben Ihren Account erfolgreich aktualisiert.'
+      destroyed: 'Auf Wiedersehen! Ihr Account wurde erfolgreich gelöscht. Wir hoffen Sie bald wieder auf unserer Webseite begrüßen zu dürfen.'
+    unlocks:
+      new:
+        unlock: "E-Mail zum Entsperren"
+        resend: "Entsperrungsinformationen erneut senden"        
+      send_instructions: 'Sie werden in Kürze Anweisungen per Mail erhalten, um Ihren Account zu entsperren.'
+      unlocked: 'Ihr Account wurde erfolgreich entsperrt. Sie sind nun eingeloggt.'
+    omniauth_callbacks:
+      success: 'Erfolgreich autorisiert durch Ihren %{kind} Account.'
+      failure: 'Das System konnte Sie nicht über Ihren %{kind} Account autorisieren, weil "%{reason}".'
+    mailer:
+      confirmation_instructions:
+        welcome: "Willkommen %{name} !"
+        confirm_link: "Klicken Sie hier um Ihren Account zu bestätigen"
+        alternative_link: "Alternativ kopieren Sie den folgenden Link in Ihren Browser"
+        email_confirm_text: "Sie können ihren Account bestätigen indem sie den folgenden Link aufrufen:"
+        subject: 'Anweisungen für die Aktivierung Ihres Accounts'
+      reset_password_instructions:
+        ignore_this_mail: "Wenn Sie diese Mail nicht angefordert haben, können Sie diese Mail ignorieren"
+        wont_change: 'Ihr Passwort wird sich nicht ändern, bis Sie den Link aufgerufen und Ihr Passwort geändert haben.'
+        change: "Passwort ändern"
+        subject: 'Anweisungen um Ihr Passwort zurückzusetzen'
+        reset_password_text: "Sie haben einen Passwortreset angefordert, um den Vorgang abzuschließen klicken Sie bitte auf folgenden Link"
+      unlock_instructions:
+        subject: 'Anweisungen um Ihren Account zu entsperren'
+        locked: 'Ihr Account wurde gesperrt, weil Ihr Passwort zu oft falsch eingegeben wurde.'
+        click_unlock: 'Klicken sie den untenstehenden Link, um Ihren Account zu entsperren.'
+        link_unlock: 'Account entsperren'
