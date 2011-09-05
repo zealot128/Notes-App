@@ -137,6 +137,7 @@ DEPENDENCIES
   coderay
   coffee-rails (~> 3.1.0)
   devise
+  haml
   jquery-rails
   paperclip
   rails (= 3.1.0)

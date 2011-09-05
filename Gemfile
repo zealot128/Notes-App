@@ -25,6 +25,8 @@ gem 'devise'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'paperclip'
 
+gem "haml"
+
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
