@@ -49,4 +49,5 @@ gem "simple-navigation"
 # TODO add this to application if want to user rack raw upload
 #require 'rack/raw_upload'
 #  config.middleware.use 'Rack::RawUpload', :paths => ['/photos/uploader', '/upload/job_picture','/upload/job_footer_picture', '/upload/logo']
-
+# Compass Colors: Color schemes automatically
+#  https://github.com/chriseppstein/compass-colors
