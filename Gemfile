@@ -17,6 +17,7 @@ group :assets do
   gem 'uglifier'
 end
 gem 'compass', :require => false
+gem "facebox-rails"
 
 gem 'coderay'
 gem "RedCloth"
