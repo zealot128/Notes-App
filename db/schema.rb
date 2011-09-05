@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110905201303) do
+ActiveRecord::Schema.define(:version => 20110905204359) do
 
   create_table "notes", :force => true do |t|
     t.string   "title"
@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(:version => 20110905201303) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "notes", ["user_id"], :name => "index_notes_on_user_id"
@@ -50,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20110905201303) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "role"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
