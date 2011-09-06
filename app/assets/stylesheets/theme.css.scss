@@ -1,0 +1,43 @@
+@import "compass/css3/gradient";
+@import "compass/css3/box-shadow";
+
+$bg-color: #1c1c1c;
+$font-color: #cccccc;
+$hl1: #afd787;
+$hl2: #5eafd7;
+$hl3: #d7afd7;
+$header-margin: 10px;
+
+body {
+  font-family: "Puritan20Normal", sans-serif;
+}
+
+#header {
+  @include linear-gradient(color-stops($bg-color, lighten($bg-color, 25%)));
+  color: $font-color;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  #headercontent {
+    padding: $header-margin;
+    font-weight: bold;
+  }
+  .login {
+    float: right;
+    margin-right: 10px;
+  }
+
+    @include box-shadow(#888 0px 0px 10px);
+}
+
+#container {
+  margin: ($header-margin * 2 + 25px) auto 0 auto;
+  width: 1000px;
+}
+
+a:link, a:visited {
+  color: $hl2;
+  text-decoration: none;
+}

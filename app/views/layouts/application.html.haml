@@ -6,6 +6,15 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %p.notice= notice
-    %p.alert= alert
-    = yield
+    #container
+
+
+      #header
+        #headercontent
+          pludoniNotes
+          .login
+            = link_to "Login", new_user_session_path
+
+      %p.notice= notice
+      %p.alert= alert
+      = yield

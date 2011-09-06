@@ -1,3 +1,15 @@
 // Place all the styles related to the notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.codeRay {
+  font-family: "LatinModernMono10Regular","Courier New",monospace;
+  font-size: 1em;
+}
+
+.note.teaser {
+  width: 320px;
+  float: left;
+  overflow: hidden;
+}

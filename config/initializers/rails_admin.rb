@@ -12,6 +12,7 @@
 RailsAdmin.config do |config|
 
   config.current_user_method { current_user } #auto-generated
+  config.label_methods << :to_s
 
   #  ==> Authentication (before_filter)
   # This is run inside the controller instance so you can setup any authentication you need to.
@@ -125,6 +126,15 @@ RailsAdmin.config do |config|
 # fields configuration is described in the Readme, if you have other question, ask us on the mailing-list!
 
 #  ==> Your models configuration, to help you get started!
+  config.model Note do
+    edit do
+      field :title
+      field :description
+      field :image
+      field :tag_list
+      field :user
+    end
+  end
 
 end
 
