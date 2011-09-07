@@ -7,4 +7,13 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role
+
+  def gravatar_image
+    q = Digest::MD5.hexdigest(self.email)
+    "http://www.gravatar.com/avatar/#{q}?s=150"
+  end
+
+  def to_s
+    self.email
+  end
 end
