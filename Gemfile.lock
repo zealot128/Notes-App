@@ -35,6 +35,7 @@ GEM
       rack-mount (~> 0.8.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.0.0)
+    active_reload (0.6.0)
     activemodel (3.1.0)
       activesupport (= 3.1.0)
       bcrypt-ruby (~> 3.0.0)
@@ -163,6 +164,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
+  active_reload
   acts-as-taggable-on
   cancan
   coderay
