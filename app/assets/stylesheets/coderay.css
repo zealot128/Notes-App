@@ -1,12 +1,3 @@
-.CodeRay, .CodeRay pre {
-  font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
-  background-color: #232323;
-  color: #E6E0DB;
-}
-.CodeRay pre {
-  margin: 0px;
-  padding: 0px;
-}
 
 .CodeRay .an { color:#E7BE69 }                      /* html attribute */
 .CodeRay .c  { color:#BC9358; font-style: italic; } /* comment */

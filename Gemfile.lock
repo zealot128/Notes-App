@@ -79,6 +79,9 @@ GEM
       thor (~> 0.14)
     fssm (0.2.7)
     haml (3.1.2)
+    haml-coderay (0.1.2)
+      coderay
+      haml
     haml-rails (0.3.4)
       actionpack (~> 3.0)
       activesupport (~> 3.0)
@@ -167,6 +170,7 @@ DEPENDENCIES
   compass!
   devise
   facebox-rails
+  haml-coderay
   haml-rails
   jquery-rails
   paperclip

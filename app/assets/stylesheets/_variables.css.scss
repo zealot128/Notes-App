@@ -1,0 +1,40 @@
+
+$rad-color: #ffd073;
+$border-color: #666;
+
+$light: #ffb273;
+$rad-color: $light;
+$dark: #1240ab;
+$very-dark: darken(#06266f, 25%);
+$complement: #ffaa00;
+
+$bg-color: #1c1c1c;
+$bg-color: $very-dark;
+$font-color: #cccccc;
+$hl1: #afd787;
+$hl2: #5eafd7;
+$hl3: #d7afd7;
+$header-margin: 10px;
+
+
+html {
+  background: lighten($light,25%);
+}
+#note #left{
+  background: white;
+}
+
+a {
+  &:link, &:visited {
+    color: $dark;
+    text-decoration: none;
+  }
+  &:hover {
+    color: #ffaa00;
+  }
+}
+h1 h2 {
+  a {
+  color: $complement;
+}
+}

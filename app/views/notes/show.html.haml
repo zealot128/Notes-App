@@ -1,0 +1,16 @@
+#note
+  #left
+    = render @note
+
+    #tags
+      - @note.tags.each do |tag|
+        %span.tag
+          =tag.name
+  #meta
+    = render @note.user
+    #date
+      vor
+      =time_ago_in_words @note.created_at
+      geschrieben
+
+

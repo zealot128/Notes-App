@@ -1,11 +1,29 @@
 // Place all the styles related to the notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/gradient";
+@import "variables";
 
 
-.codeRay {
-  font-family: "LatinModernMono10Regular","Courier New",monospace;
+.CodeRay, .CodeRay pre {
+  background-color: #232323;
+  color: #E6E0DB;
+}
+
+.CodeRay {
+  font-family: "LatinModernMono10Regular","Courier New", "Menlo", "Terminal", "DejaVu-Sans mono", monospace;
   font-size: 1em;
+  padding: 15px;
+  border: 1px solid black;
+  @include border-radius();
+  width: 94%;
+  line-height: 1;
+  pre {
+    margin: 0px;
+    padding: 0px;
+  }
 }
 
 .note.teaser {
@@ -13,3 +31,29 @@
   float: left;
   overflow: hidden;
 }
+#note {
+  width: 100%;
+  #left {
+    width: 700px;
+    float: left;
+    border: 1px solid $border-color;
+    @include border-radius();
+    padding: 15px;
+  }
+  .note {
+    float: none;
+    width: 100%;
+  }
+  #meta {
+    float: right;
+      padding: 25px;
+      border: 1px solid $border-color;
+      @include border-radius();
+      @include box-shadow($border-color, 0px, 5px, 5px);
+      @include radial-gradient(color-stops($rad-color, darken($rad-color, 20%)), bottom right);
+
+    .user {
+    }
+  }
+}
+
