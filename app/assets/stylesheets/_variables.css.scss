@@ -3,7 +3,6 @@ $rad-color: #ffd073;
 $border-color: #666;
 
 $light: #ffb273;
-$rad-color: $light;
 $dark: #1240ab;
 $very-dark: darken(#06266f, 25%);
 $complement: #ffaa00;
@@ -16,7 +15,7 @@ $hl2: #5eafd7;
 $hl3: #d7afd7;
 $header-margin: 10px;
 
-
+$rad-color: #eee;
 html {
   background: lighten($light,25%);
 }

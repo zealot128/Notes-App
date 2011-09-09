@@ -132,6 +132,7 @@ RailsAdmin.config do |config|
       field :description
       field :image
       field :tag_list
+      field :link
       field :user
     end
   end

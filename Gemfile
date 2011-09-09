@@ -20,6 +20,8 @@ end
 gem "facebox-rails"
 gem 'will_paginate', '~> 3.0'
 
+gem "paperclip"
+
 
 gem 'coderay'
 gem "haml-coderay"

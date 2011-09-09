@@ -22,13 +22,11 @@ body {
     float: right;
     margin-right: 10px;
   }
-
   @include box-shadow(#888 0px 0px 10px);
 }
 
 #container {
-  margin: ($header-margin * 2 + 25px) auto 0 auto;
-  width: 1000px;
+  margin: 50px;
 }
 
 

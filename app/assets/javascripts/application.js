@@ -8,3 +8,8 @@
 //= require jquery_ujs
 //= require_tree .
 //= require jquery.facebox
+//
+
+jQuery(document).ready(function($) {
+  $('a[rel*=facebox]').facebox()
+})

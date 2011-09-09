@@ -1,12 +1,13 @@
 class Note < ActiveRecord::Base
   belongs_to :user
   has_attached_file :image
+  has_attached_file :preview, :styles => { :thumb => "100x100", :normal => "300x300" }
   acts_as_taggable
 
   include ActionView::Helpers::TextHelper
   include ActionView::Helpers::TagHelper
   validates_presence_of :title, :description, :user_id
-  before_save :make_html
+  before_save :make_html, :generate_preview
 
   def make_html
     text = coderay(description)
@@ -22,6 +23,22 @@ class Note < ActiveRecord::Base
     return text.html_safe
   end
 
+  def generate_preview
+    if self.link_changed?
+      cmd = "#{Rails.root}/wkhtmltoimage --height 768 '#{link}' tmp/tmp.png "
+      logger.info `#{cmd}`
+      file = File.open("#{Rails.root}/tmp/tmp.png")
+      self.preview = file
+    end
+  end
+
+  def has_link?
+    self.link.present?
+  end
+
+  def domain
+    URI.parse(self.link).host.gsub("www.","")
+  end
 
 
 end

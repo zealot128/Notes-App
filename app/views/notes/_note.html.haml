@@ -1,3 +1,11 @@
 .note.teaser
+  - if not full and note.has_link?
+    .link= link_to note.domain, note.link, :class => "button", :target => "_blank"
+
   %h2.title=link_to note.title, note
   .content=raw note.html
+  - if full
+    - if note.has_link?
+      .link
+        = image_tag note.preview(:thumb)
+        = link_to note.domain, note.link, :class => "button", :target => "_blank"

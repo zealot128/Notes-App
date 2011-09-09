@@ -5,6 +5,7 @@
 @import "compass/css3/box-shadow";
 @import "compass/css3/gradient";
 @import "variables";
+@import "buttons";
 
 
 .CodeRay, .CodeRay pre {
@@ -25,11 +26,33 @@
     padding: 0px;
   }
 }
+#note-list {
+  .link {
+    position: absolute;
+    a.button {
+      position: relative;
+      top: 250px;
+    }
+  }
+}
 
-.note.teaser {
+#note-list .note.teaser {
   width: 320px;
   float: left;
   overflow: hidden;
+  height: 300px;
+  background: none repeat scroll 0 0 white;
+  border: 1px solid #999999;
+  @include border-radius();
+  margin: 5px;
+  overflow: hidden;
+  padding: 10px;
+}
+#note-list .note.teaser.focus {
+  max-width: 800px;
+  position: absolute;
+  width: 100%;
+  height: auto;
 }
 #note {
   width: 100%;
@@ -44,6 +67,13 @@
     float: none;
     width: 100%;
   }
+  #tags {
+    padding: 10px 0 0;
+    .tag {
+      text-transform: capitalize;
+      @extend .button;
+    }
+  }
   #meta {
     float: right;
       padding: 25px;
@@ -54,6 +84,10 @@
 
     .user {
     }
+  }
+  #date {
+    color: #666666;
+    font-style: italic;
   }
 }
 
