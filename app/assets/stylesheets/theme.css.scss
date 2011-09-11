@@ -70,3 +70,13 @@ h1, h2, h3, h4 {
 }
 
 
+#share {
+  line-height: 1;
+  font-size: 80%;
+  #container { margin: 5px;  width: 500px;}
+  .markItUp textarea { height: 80px; }
+  h1 { font-size: 1.2em;}
+  legend { display: none; }
+  #markItUpNote_description textarea { width: 450px; }
+
+}

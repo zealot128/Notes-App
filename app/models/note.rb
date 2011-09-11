@@ -9,6 +9,8 @@ class Note < ActiveRecord::Base
   validates_presence_of :title, :description, :user_id
   before_save :make_html, :generate_preview
 
+  self.per_page = 20
+
   def make_html
     text = coderay(description)
     self.html = RedCloth.new(text).to_html
@@ -40,5 +42,9 @@ class Note < ActiveRecord::Base
     URI.parse(self.link).host.gsub("www.","")
   end
 
+
+  def self.initialize_from_tumblr(params)
+    Note.new(:link => params["u"], :description => params["s"], :title => params["t"])
+  end
 
 end

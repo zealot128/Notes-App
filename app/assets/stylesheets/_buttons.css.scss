@@ -95,10 +95,7 @@
   content: " ";
 }
 
-.button.url:before {
-  background: url("/assets/insert-hyperlink.png") no-repeat scroll center center transparent;
-}
 
-.button.tag:before {
-  background: url("/assets/tag_red.png") no-repeat scroll center center transparent;
+.url:before {
+  background: url("/assets/insert-hyperlink.png") no-repeat scroll center center transparent;
 }

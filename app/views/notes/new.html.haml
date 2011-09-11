@@ -5,9 +5,14 @@
   = f.inputs "Text" do
     = f.input :title
     = f.input :description, :input_html => {:class => "gui"}
-    = f.input :user_id, :as => :select, :collection => User.all, :include_blank => false
     = f.input :tag_list, :hint => Note.tag_counts.order("count desc").map{|i| i.name}.join(", ")
 
   = f.inputs "Anhang" do
     = f.input :image
     = f.input :link
+  = f.buttons
+
+%a{:href => bookmarklet}
+  Bookmarklet
+
+

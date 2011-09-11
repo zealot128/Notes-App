@@ -3,12 +3,6 @@
   .viewport
     %h2.title=link_to note.title, note
     .content=raw note.html
-    - if full
-      - if note.has_link?
-        .link
-          = image_tag note.preview(:thumb)
-          = link_to  note.link, :class => "url button", :target => "_blank", :title => note.link do
-            = note.domain
   - if not full and note.has_link?
     .link
       = link_to  note.link, :class => "button url", :target => "_blank", :title => note.link do
