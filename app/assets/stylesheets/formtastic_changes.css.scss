@@ -1,0 +1,44 @@
+/* -------------------------------------------------------------------------------------------------
+
+Load this stylesheet after formtastic.css in your layouts to override the CSS to suit your needs.
+This will allow you to update formtastic.css with new releases without clobbering your own changes.
+
+For example, to make the inline hint paragraphs a little darker in color than the standard #666:
+
+form.formtastic fieldset > ol > li p.inline-hints { color:#333; }
+
+HINT:
+The following style may be *conditionally* included for improved support on older versions of IE(<8)
+form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
+
+--------------------------------------------------------------------------------------------------*/
+@import "compass/css3/border-radius";
+form.note {
+  max-width: 800px;
+}
+form.formtastic {
+  textarea, input[type=text], input[type=file] {
+    border: 1px solid #666;
+    @include border-radius(2px);
+  }
+  input[type=text] {
+    font-size: 150%;
+    padding: 10px;
+  }
+}
+form fieldset legend {
+  font-weight: bold;
+}
+
+#markItUpNote_description {
+  width: auto;
+  width: 590px;
+  textarea {
+    width: 100%;
+    border: 3px solid #3C769D;
+
+  }
+}
+#note_description_input > div {
+  float: left;
+}

@@ -8,8 +8,12 @@
 //= require jquery_ujs
 //= require_tree .
 //= require jquery.facebox
+//= require markitup/jquery.markitup
+//= require markitup/sets/textile/set.js
+//
 //
 
 jQuery(document).ready(function($) {
   $('a[rel*=facebox]').facebox()
+  $('textarea.gui').markItUp(mySettings);
 })

@@ -2,12 +2,18 @@
 @import "compass/css3/box-shadow";
 @import "variables";
 
+html {
+  background: $base3;
+}
 body {
   font-family: "Puritan20Normal", sans-serif;
 }
+#container {
+  margin: 50px;
+}
 
 #header {
-  @include linear-gradient(color-stops($bg-color, lighten($bg-color, 25%)));
+  @include linear-gradient(color-stops($bg-color, lighten($bg-color, 15%)));
   color: $font-color;
   margin: 0;
   position: absolute;
@@ -22,12 +28,45 @@ body {
     float: right;
     margin-right: 10px;
   }
-  @include box-shadow(#888 0px 0px 10px);
+  @include box-shadow(#444 0px 0px 15px);
 }
 
-#container {
-  margin: 50px;
+
+#note #left{
+  background: white;
 }
 
+a {
+  &:link, &:visited {
+    color: $dark;
+    text-decoration: none;
+  }
+  &:hover {
+    color: #ffaa00;
+  }
+}
+h1, h2, h3, h4 {
+  a:link, a:visited {
+    color: $green;
+  }
+  a:hover {
+    color: $base00;
+  }
+  a:link, a:visited {
+    color: $blue;
+  }
+  a:hover {
+    color: $orange;
+  }
+}
+#header {
+  color: $base0;
+  a:link, a:visited {
+    color: $blue;
+  }
+  a:hover {
+    color: $orange;
+  }
+}
 
 

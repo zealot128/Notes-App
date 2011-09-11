@@ -7,4 +7,9 @@ class NotesController < ApplicationController
   def show
     render :layout => false if request.xhr?
   end
+
+  def new
+  end
+  def create
+  end
 end

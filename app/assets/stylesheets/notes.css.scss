@@ -6,54 +6,56 @@
 @import "compass/css3/gradient";
 @import "variables";
 @import "buttons";
+@import "compass/css3/opacity";
 
 
-.CodeRay, .CodeRay pre {
-  background-color: #232323;
-  color: #E6E0DB;
-}
-
-.CodeRay {
-  font-family: "LatinModernMono10Regular","Courier New", "Menlo", "Terminal", "DejaVu-Sans mono", monospace;
-  font-size: 1em;
-  padding: 15px;
-  border: 1px solid black;
-  @include border-radius();
-  width: 94%;
-  line-height: 1;
-  pre {
-    margin: 0px;
-    padding: 0px;
-  }
-}
 #note-list {
-  .link {
-    position: absolute;
-    a.button {
-      position: relative;
-      top: 250px;
+  .note {
+    width: 320px;
+    float: left;
+    overflow: hidden;
+    height: 300px;
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #999999;
+    @include border-radius();
+    margin: 5px;
+    overflow: hidden;
+    padding: 10px;
+    &.focus {
+      max-width: 800px;
+      position: absolute;
+      width: 100%;
+      height: auto;
     }
   }
+  .link {
+    position: absolute;
+    z-index: 50;
+    a.button {
+      top: -40px;
+      position: relative;
+      color: $base01;
+    }
+  }
+  .cover {
+    @include opacity(0.5);
+  }
+  .cover2 {
+    @include opacity(0.8);
+  }
+  .cover, .cover2 {
+    position: relative;
+    height: 40px;
+    top: -73px;
+    background: white;
+    z-index: 10;
+  }
+  .viewport {
+    height: 300px;
+    overflow: hidden;
+  }
 }
 
-#note-list .note.teaser {
-  width: 320px;
-  float: left;
-  overflow: hidden;
-  height: 300px;
-  background: none repeat scroll 0 0 white;
-  border: 1px solid #999999;
-  @include border-radius();
-  margin: 5px;
-  overflow: hidden;
-  padding: 10px;
-}
-#note-list .note.teaser.focus {
-  max-width: 800px;
-  position: absolute;
-  width: 100%;
-  height: auto;
-}
 #note {
   width: 100%;
   #left {
@@ -81,7 +83,6 @@
       @include border-radius();
       @include box-shadow($border-color, 0px, 5px, 5px);
       @include radial-gradient(color-stops($rad-color, darken($rad-color, 20%)), bottom right);
-
     .user {
     }
   }

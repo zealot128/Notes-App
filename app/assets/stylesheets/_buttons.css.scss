@@ -87,3 +87,18 @@
 .button.spark:before { content: "\2737"; }
 
 .button.play:before { content: "\25B6"; }
+
+.button.url:before, .button.tag:before {
+  display: block;
+  height: 33px;
+  width: 20px;
+  content: " ";
+}
+
+.button.url:before {
+  background: url("/assets/insert-hyperlink.png") no-repeat scroll center center transparent;
+}
+
+.button.tag:before {
+  background: url("/assets/tag_red.png") no-repeat scroll center center transparent;
+}

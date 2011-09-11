@@ -1,0 +1,86 @@
+@import "fonts";
+@import "variables";
+.railscast {
+  //background-color: #232323;
+  //color: lighten(#E6E0DB, 10%);
+  color: #232323;
+  background-color: lighten(#E6E0DB, 10%);
+  pre {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .an { color:#E7BE69 }                      /* html attribute */
+  .c  { color:#BC9358; font-style: italic; } /* comment */
+  .ch { color:#509E4F }                      /* escaped character */
+  .cl { color:#FFF }                         /* class */
+  .co { color:#F00 }                         /* constant */
+  .fl { color:#A4C260 }                      /* float */
+  .fu { color:#FFC56D }                      /* function */
+  .gv { color:#D0CFFE }                      /* global variable */
+  .i  { color:#A4C260 }                      /* integer */
+  .il { color:#55f; }                 /* inline code */
+  .iv { color:#D0CFFE }                      /* instance variable */
+  .pp { color:#E7BE69 }                      /* doctype */
+  .r  { color:#CB7832 }                      /* keyword */
+  .kw { color:#CB7832 }                      /* keyword */
+  .rx { color:#A4C260 }                      /* regex */
+  .s  { color:#A4C260 }                      /* string */
+  .sy { color:#6C9CBD }                      /* symbol */
+  .ta { color:#E7BE69 }                      /* html tag */
+  .pc { color:#6C9CBD }                      /* boolean */
+}
+
+.solarize {
+  color: $base00;
+  background-color: $base3;
+  pre {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .an { color:$base00 }                           /* html attribute */
+  .pp, .dt { color:$base01; background: $base2; } /* doctype */
+  .ta { color:$blue; font-weight: bold; }         /* html tag */
+
+  .c  { color:$base1; font-style: italic; }       /* comment */
+  .ch { color:#509E4F }                           /* escaped character */
+  .cl { color:$blue; font-weight: bold; }         /* class */
+  .co { color:$yellow }                           /* constant */
+  .fl { color:$cyan }                             /* float */
+  .fu { color:$blue }                             /* function */
+  .gv { color:$blue }                             /* global variable */
+  .i  { color:$cyan }                             /* integer */
+  .il { background-color:$base2; }                /* inline code */
+  .iv { color:#D0CFFE }                           /* instance variable */
+  .lv { color:$violet; }                          /* PHP variables  */
+  .pd { color:$red; }                             /* PHP $_GET  */
+  .r  { color:$base01; font-weight: bold; }       /* keyword */
+  .kw { color:$orange }                           /* keyword */
+  .rx { color:$red }                              /* regex */
+  .s  { color:$green }                            /* string */
+  .sy { color:$magenta }                          /* symbol */
+  .pc { color:$violet; font-weight: bold; }       /* boolean */
+}
+
+
+
+@import "compass/css3/border-radius";
+
+.CodeRay {
+  @extend .solarize;
+}
+.CodeRay {
+  font-family: LatinModernMono10Regular, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  font-size: 1.2em;
+  padding: 15px;
+  border: 1px solid black;
+  @include border-radius();
+  overflow: hidden;
+  width: 94%;
+  line-height: 1.4;
+  pre {
+    margin: 0px;
+    padding: 0px;
+  }
+}

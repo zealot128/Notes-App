@@ -46,7 +46,7 @@ end
 # TODO
 #
 gem 'acts-as-taggable-on'
-#gem "formtastic"
+gem "formtastic"
 #gem "cocoon" # Formtastic addition: Partial Forms, Nested, mit "add" remove von nested resource
 gem "simple-navigation"
 

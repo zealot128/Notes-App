@@ -7,18 +7,19 @@
     = csrf_meta_tags
   %body
     #container
-
-
       #header
         #headercontent
-          = link_to "pludoniNotes", root_path
+          %span#h-title= link_to "pludoniNotes", root_path
           .login
+            = link_to "Impressum", "/pages/about"
+            |
             - if current_user.present?
-              Eingeloggt als
-              = current_user.email
               = link_to "Admin", rails_admin_path
               |
               = link_to "Logout", destroy_user_session_path
+              |
+              Eingeloggt als
+              = current_user.email
 
             - else
               = link_to "Login", new_user_session_path
