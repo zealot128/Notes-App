@@ -1,6 +1,6 @@
 class AddAdminUser < ActiveRecord::Migration
   def up
-    User.create(:email => "admin@pludoni.de", :password => "admin", :password_confirmation => "admin", :role => "admin")
+    User.create(:email => "admin@pludoni.de", :password => "admin123", :password_confirmation => "admin123", :role => "admin")
   end
 
   def down

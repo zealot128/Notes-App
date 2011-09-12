@@ -5,8 +5,8 @@
  *= require_self
  *= require_tree .
  *= require jquery.facebox
- *= require skins/simple/style.css
- *= require markitup/sets/textile/style.css
+ *= require skins/simple/style.css.scss
+ *= require markitup/sets/textile/style.css.scss
  *= require socialshareprivacy.css
  *= require jquery.qtip.css
 */
