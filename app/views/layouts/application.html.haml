@@ -1,7 +1,8 @@
 !!!
-%html
+%html{:class => session[:color_scheme]}
   %head
     %title pludoni Notes
+    %link(rel="icon" href="/favicon.ico" type="image/png")
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -12,6 +13,7 @@
         #headercontent
           %span#h-title= link_to "pludoniNotes", root_path
           .login
+            = link_to " ", "#", :id => "light-switcher"
             = link_to "Impressum", "/pages/about"
             |
             - if current_user.present?

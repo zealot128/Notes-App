@@ -27,9 +27,10 @@ class Note < ActiveRecord::Base
 
   def generate_preview
     if self.link_changed?
-      cmd = "#{Rails.root}/wkhtmltoimage --height 768 '#{link}' tmp/tmp.png "
+      filename = Digest::MD5.hexdigest(link)
+      cmd = "#{Rails.root}/wkhtmltoimage --height 768 '#{link}' tmp/#{filename}.png "
       logger.info `#{cmd}`
-      file = File.open("#{Rails.root}/tmp/tmp.png")
+      file = File.open("#{Rails.root}/tmp/#{filename}.png")
       self.preview = file
     end
   end

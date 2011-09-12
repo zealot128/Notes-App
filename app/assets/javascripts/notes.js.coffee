@@ -23,3 +23,25 @@ jQuery ->
         }
       }
     }
+  $('#light-switcher').click ->
+    $(this).toggleClass("switched")
+    $('html').toggleClass("dark")
+    $('body').toggleClass("dark")
+    $.post('/sessions/switch_color')
+    return false
+  $('.link .url').each ->
+    console.log this
+    cur_element = $(this)
+    data =  cur_element.find(".tip").html()
+    cur_element.qtip {
+      content: "loading.."
+      events: {
+        render: (event,api) ->
+         #console.log event.target
+         #console.log this
+         $(this).find(".ui-tooltip-content").html(data)
+      },
+      style: {
+        classes: 'ui-tooltip-blue ui-tooltip-shadow'
+      }
+    }

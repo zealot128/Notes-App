@@ -1,5 +1,6 @@
 class NotesController < ApplicationController
   load_and_authorize_resource :except => :share
+  authorize_resource
   def index
     @notes = Note.order("created_at desc").paginate(:page => params[:page])
     respond_to do |what|

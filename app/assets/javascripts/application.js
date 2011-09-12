@@ -11,6 +11,7 @@
 //= require markitup/jquery.markitup
 //= require markitup/sets/textile/set.js
 //= require jquery.socialshareprivacy.js
+//= require jquery.qtip.min.js
 //
 //
 

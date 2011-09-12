@@ -8,6 +8,14 @@
 @import "buttons";
 @import "compass/css3/opacity";
 
+.tip {
+  display: none;
+}
+  .tip-content {
+    text-align: center;
+    font-size: 13px;
+    padding: 15px;
+  }
 
 #note-list {
   .note {
@@ -35,6 +43,7 @@
       top: -40px;
       position: relative;
       color: $base01;
+      left: -10px;
     }
   }
   .cover {
@@ -78,7 +87,7 @@
   #meta {
     float: left;
     margin-left: 20px;
-    width: 200px;
+    width: 250px;
     padding: 25px;
     text-align: center;
     border: 1px solid $border-color;

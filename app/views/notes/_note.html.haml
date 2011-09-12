@@ -6,6 +6,10 @@
   - if not full and note.has_link?
     .link
       = link_to  note.link, :class => "button url", :target => "_blank", :title => note.link do
+        .tip
+          .tip-content
+            = image_tag note.preview(:thumb)
+            .tip-link= note.link
         = note.domain
   .cover
   .cover2

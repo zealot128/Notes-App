@@ -5,6 +5,30 @@
 html {
   background: $base3;
 }
+
+html.dark {
+  background: $base03;
+  color: $base0;
+  #header {
+    @include linear-gradient(color-stops($base02, lighten($base02, 15%)));
+  }
+  #note-list {
+    .note {
+      background: $base02;
+    }
+    .cover, .cover2{
+      background-color: $base02;
+    }
+  }
+  #note #left {
+    background: $base02;
+  }
+  .CodeRay {
+    background: $base03;;
+  }
+
+}
+
 body {
   font-family: "Puritan20Normal", sans-serif;
 }
@@ -79,4 +103,14 @@ h1, h2, h3, h4 {
   legend { display: none; }
   #markItUpNote_description textarea { width: 450px; }
 
+}
+#light-switcher {
+  background: url("/assets/bullet-black.png") no-repeat scroll 0 0 transparent;
+  display: inline-block;
+  height: 13px;
+  width: 20px;
+  &.switched {
+    background: url("/assets/bullet-yellow.png") no-repeat scroll 0 0 transparent;
+  }
+  outline: none;
 }

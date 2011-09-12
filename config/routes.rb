@@ -1,9 +1,5 @@
 PludoniNotes::Application.routes.draw do
-  get "tags/show"
-
-  get "notes/new"
-
-  get "notes/create"
+  post "sessions/switch_color"
 
   get "pages/about"
 
