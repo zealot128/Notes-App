@@ -1,5 +1,6 @@
 .bundle
 .console_history
+public/system/
 db/*.sqlite3
 log/*.log
 tmp/
