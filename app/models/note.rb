@@ -18,11 +18,10 @@ class Note < ActiveRecord::Base
 
 
   def coderay(text)
-    text.gsub!(/\<code(?: lang="(.+?)")?\>(.+?)\<\/code\>/m) do
-      code = CodeRay.scan($2, $1).div(:css => :class)
+    text.gsub(/\<code(?: lang="(.+?)")?\>(.+?)\<\/code\>/m) do
+      code = CodeRay.scan($2, $1).div(:css => :class).html_safe
       "<notextile>#{code}</notextile>"
-    end
-    return text.html_safe
+    end.html_safe
   end
 
   def generate_preview
