@@ -1,0 +1,24 @@
+h1. pludoni Note App
+
+inspired by makandra notes i decided to programm this blog-like app for taking programming related notes. I didn't find any that fit my needs so i did that one.
+Also, this was a great opportunity to test the new Rails 3.1 Features, like assets.
+
+h2. Features:
+
+* Styling - Solarized color scheme
+* Syntax Coloring by coderay
+* image attachment
+* link attachment -> with preview image generation powered by wkhtmltoimage (wich is bundled for 64bit systems)
+* The usual: feeds, pagiation, admin interface
+* Authentication with devise
+* **tumblr-like** Bookmarklet for fast-reblogging of content
+* Rails 3.1 with compass and coffeescript.
+
+
+h2. TODO
+
+* Installation of wkhtml needs some description but is pretty easy actually
+* cause the app is more like a composition of great ruby gems, i do not use any tests
+
+
+
