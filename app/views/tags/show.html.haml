@@ -1,7 +1,0 @@
-%h1=@tag.name
-= content_for :head do
-  = auto_discovery_link_tag :atom, :format => :atom
-
-Hier finden sie alle Beiträge, die mit #{@tag.name} getaggt sind.
-#note-list
-  = render @notes, :full => false
