@@ -29,7 +29,7 @@ jQuery ->
     $('body').toggleClass("dark")
     $.post('/sessions/switch_color')
     return false
-  $('.link .url').each ->
+  $('#note-list .link .url').each ->
     console.log this
     cur_element = $(this)
     data =  cur_element.find(".tip").html()
@@ -43,5 +43,9 @@ jQuery ->
       },
       style: {
         classes: 'ui-tooltip-blue ui-tooltip-shadow'
+      }
+      position: {
+        my: "bottom center",
+        at: "top center"
       }
     }

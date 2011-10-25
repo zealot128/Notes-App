@@ -19,19 +19,33 @@ class Note < ActiveRecord::Base
 
   def coderay(text)
     text.gsub(/\<code(?: lang="(.+?)")?\>(.+?)\<\/code\>/m) do
-      code = CodeRay.scan($2, $1).div(:css => :class).html_safe
+      #code = CodeRay.scan($2, $1).div(:css => :class).html_safe
+      code = pygmentize($2, $1).html_safe rescue ""
       "<notextile>#{code}</notextile>"
     end.html_safe
   end
 
+  def pygmentize(text,lexer)
+    Rails.logger.warn text.inspect
+    Rails.logger.warn lexer.inspect
+    pygmentize = IO.popen("pygmentize -f html -l #{lexer}", "w+")
+    pygmentize.puts text
+    pygmentize.close_write
+    result = pygmentize.gets(nil)
+    pygmentize.close
+    result
+  end
+
   def generate_preview
-    if self.link_changed?
+    if has_link? and self.link_changed?
       filename = Digest::MD5.hexdigest(link)
-      cmd = "#{Rails.root}/wkhtmltoimage --height 768 '#{link}' tmp/#{filename}.png "
-      logger.info `#{cmd}`
+      cmd = "#{Rails.root}/wkhtmltoimage --load-error-handling ignore --height 768 '#{link}' tmp/#{filename}.png "
+      logger.warn `#{cmd} 2>&1`
       file = File.open("#{Rails.root}/tmp/#{filename}.png")
       self.preview = file
     end
+  rescue
+    logger.warn "Could not generate preview!"
   end
 
   def has_link?
@@ -39,7 +53,7 @@ class Note < ActiveRecord::Base
   end
 
   def domain
-    URI.parse(self.link).host.gsub("www.","")
+    URI.parse(self.link).host.gsub("www.","") rescue self.link
   end
 
 

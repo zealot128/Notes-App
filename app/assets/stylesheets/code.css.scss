@@ -66,21 +66,33 @@
 
 
 @import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
 
-.CodeRay {
-  @extend .solarize;
-}
-.CodeRay {
-  font-family: LatinModernMono10Regular, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-  font-size: 1.2em;
-  padding: 15px;
-  border: 1px solid black;
+//.CodeRay {
+  //@extend .solarize;
+//}
+//.CodeRay {
+  //font-size: 1.2em;
+  //padding: 15px;
+  //border: 1px solid black;
+  //@include border-radius();
+  //overflow: hidden;
+  //width: 94%;
+  //line-height: 1.4;
+  //pre {
+    //margin: 0px;
+    //padding: 0px;
+  //}
+//}
+
+@import "solarize";
+.highlight {
+  @extend .theme-solarize-dark;
   @include border-radius();
-  overflow: hidden;
-  width: 94%;
-  line-height: 1.4;
-  pre {
-    margin: 0px;
-    padding: 0px;
-  }
+  @include box-shadow(1px, 1px, 5px, #666666);
+  font-family: LatinModernMono10Regular, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+.highlight pre{
+  padding: 5px;
+
 }
