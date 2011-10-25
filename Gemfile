@@ -41,6 +41,11 @@ gem "haml-rails"
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem "guard-rails"
+  gem "guard-minitest"
+  gem "guard-bundler"
+  gem "rb-inotify"
+  gem "shoulda"
 end
 
 # TODO

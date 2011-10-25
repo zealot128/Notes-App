@@ -5,6 +5,9 @@
 html {
   background: $base3;
 }
+.clear {
+  clear: both;
+}
 
 html.dark {
   background: $base03;

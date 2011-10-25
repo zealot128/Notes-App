@@ -24,6 +24,19 @@ class NotesController < ApplicationController
     end
   end
 
+
+  def edit
+  end
+
+  def update
+    if @note.update_attributes(params[:note])
+      redirect_to note_path(@note, :notice => "Aktualisiert")
+    else
+      render :edit
+    end
+  end
+
+
   def share
     @note = Note.initialize_from_tumblr(params)
     render :template => "notes/new", :layout => "share"

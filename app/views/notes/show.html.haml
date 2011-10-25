@@ -4,6 +4,8 @@
     #socialshareprivacy
 
   #meta
+    - if can? :edit, @note
+      = link_to "Bearbeiten", edit_note_path(@note), :class => "edit button"
     = render @note.user
     #date
       vor

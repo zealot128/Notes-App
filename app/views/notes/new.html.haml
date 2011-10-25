@@ -1,18 +1,8 @@
 %h1 Neue Note anlegen
 
 
-= semantic_form_for @note do |f|
-  = f.inputs "Text" do
-    = f.input :title
-    = f.input :description, :input_html => {:class => "gui"}
-    = f.input :tag_list, :hint => Note.tag_counts.order("count desc").map{|i| i.name}.join(", ")
-
-  = f.inputs "Anhang" do
-    = f.input :image
-    = f.input :link
-  = f.buttons
+= render "form"
 
 %a{:href => bookmarklet}
-  Bookmarklet
-
+  Bookmarklet zum Adden!
 

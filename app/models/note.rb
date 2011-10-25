@@ -9,7 +9,7 @@ class Note < ActiveRecord::Base
   validates_presence_of :title, :description, :user_id
   before_save :make_html, :generate_preview
 
-  self.per_page = 20
+  self.per_page = 8
 
   def make_html
     text = coderay(description)
